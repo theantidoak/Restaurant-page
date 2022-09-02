@@ -8,12 +8,8 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true
+    // clean: {
+    //   keep: "index.html style.css",
+    // }
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Restaurant page',
-      template: 'dist/index.html'
-    }),
-  ],
 };
