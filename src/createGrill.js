@@ -1,5 +1,5 @@
-import IconBottom from './bottomGrill.svg';
-import IconTop from './topGrill.svg';
+import IconBottom from './images/bottomGrill.svg';
+import IconTop from './images/topGrill.svg';
 
 function grillParts() {    
 

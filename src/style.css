@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'firestarterregular';
-    src: url('firestarter-webfont.woff2') format('woff2'),
-         url('firestarter-webfont.woff') format('woff');
+    src: url('fonts/firestarter-webfont.woff2') format('woff2'),
+         url('fonts/firestarter-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
