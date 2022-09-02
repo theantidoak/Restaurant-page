@@ -86,13 +86,31 @@
     transform: scale(1.1);
 }
 
-.fire-path {
+/* .fire-path {
     transform: scale(.25) translate(18rem, 31rem);
-}
+} */
 
 .test {
-    background-image: url(topGrill.svg);
-    background-repeat: no-repeat;
+    
     height: 30rem;
     width: 30rem;
 }
+
+.test img {
+    fill: blue;
+    color: blue;
+}
+
+.test .top-img {
+    position: absolute;
+    z-index: 2;
+}
+
+.grill-top2:hover #svg-object {
+    transform: rotate(-.15turn) translate(-5%, -70%);
+}
+
+.grill-top2 {
+    width: fit-content;
+}
+
