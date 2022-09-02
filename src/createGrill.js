@@ -3,7 +3,8 @@ import IconTop from './topGrill.svg';
 
 function grillParts() {    
 
-    const content = document.querySelector('.content');
+    const content = document.createElement('div');
+    content.classList.add('content');
     const grill = document.createElement('div');
     grill.classList.add('grill');
     const grillTop = document.createElement('div');
@@ -36,6 +37,7 @@ function grillParts() {
     grill.appendChild(grillBottom);
 
     content.appendChild(grill);
+    document.body.appendChild(content);
 
 };
 
