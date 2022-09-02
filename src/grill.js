@@ -1,3 +1,6 @@
+
+
+const containGrillSVG = function() {
 <div class="entire-grill">
           <div class="grill-top">
             <svg
@@ -12,7 +15,7 @@
             xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
             xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:svg="http://www.w3.org/2000/svg">>
+            xmlns:svg="http://www.w3.org/2000/svg">
               <path
                 style="fill:#000000;stroke-width:0.66997"
                 id="top"
@@ -255,3 +258,4 @@
             <h3>About</h3>
           </div>
         </div>
+}
