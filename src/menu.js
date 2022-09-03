@@ -11,6 +11,7 @@ function createMenu() {
     const title = document.createElement('h1');
     title.classList.add('first-text');
     const titleContent = document.createTextNode('Off the Grill');
+    
     const menuItems = document.createElement('div');
     menuItems.classList.add('menu-items');
 

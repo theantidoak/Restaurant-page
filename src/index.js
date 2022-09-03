@@ -5,6 +5,7 @@ import { addGrillFeatures,  grillParts } from "./createGrill";
 import './style.css';
 import { createMenu } from "./menu";
 import IconBrisket from './images/brisket.jpg';
+import { createAbout } from "./about";
 
 
 (function init() {
@@ -50,7 +51,9 @@ import IconBrisket from './images/brisket.jpg';
     // addGrillFeatures();
 
 
-    createMenu();
+    // createMenu();
+
+    createAbout();
 })();
 
 

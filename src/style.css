@@ -35,11 +35,10 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0;
+    align-items: center;
     background-color: rgba(0, 0, 0, .7);
     width: 100%;
-    height: 6rem;
-    overflow-x: hidden;
+    height: 8rem;
 }
 
 .title {
@@ -47,54 +46,69 @@ header {
     border-bottom: 2px double red;
     padding-bottom: 4px;
     padding-top: 1rem;
-    margin-left: 3.5rem;
-    margin-top: 0;
+    margin: 0 0 0 3.5rem;
     width: fit-content;
+    height: 3rem;
     font-family: 'firestarterregular';
     font-size: 1.5rem;
 }
 
 .hamburgerGrill {
-    background-image: url('images/topGrill.svg');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
-    background-color: rgba(255, 0, 0, .6);
+    mask-image: url('images/topGrill.svg');
+    -webkit-mask-image: url('images/topGrill.svg');
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    
+    background-color: rgba(255, 0, 0, 1);
     border-radius: 20px;
     min-width: 5rem;
     min-height: 5rem;
     z-index: 3;
     margin-right: 1rem;
     cursor: pointer;
-    padding: 1rem 1rem 0 .75rem;
+    padding: 1rem 0 ;
     opacity: 1;
 }
 
+.hamburgerGrill:hover {
+    transform: scale(1.1);
+}
+
 .hamburgerGrill:focus {
+    mask-image: none;
+    -webkit-mask-image: none;
     background-image: url('images/bottomGrill.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     background-color: rgba(255, 0, 0, .6);
     padding: 1rem 2rem 0 1.5rem;
     margin-right: 0;
     border-radius: 0;
-    right: 0;
+    right: 1rem;
     position: fixed;
+    transform: scale(1);
 }
 
 .hamburgerGrill:focus + .open-hamburger {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(-7rem);
     transition: all ease .5s;
 }
 
 .open-hamburger {
-    width: 2.5rem;
+    height: 5rem;
+    width: fit-content;
     opacity: 0;
     position: fixed;
     right: 0;
-    top: 6rem;
-    background-color: rgba(255, 0, 0, .6);
-    padding: 1rem 2.5rem;
-    transform: translateX(6rem);
+    top: 1.5rem;
+    padding: 0;
+    transform: translateX(0);
     transition: all ease .5s;
     cursor: pointer;
 }
@@ -106,12 +120,24 @@ header {
     margin: 0;
     color: white;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    height: 100%;
 }
 
 .open-hamburger ul li {
-    padding: .25rem 0;
+    background-color: rgba(255, 0, 0, .6);
+    height: 100%;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.open-hamburger ul li:hover {
+    transform: scale(1.1);
 }
 
 
@@ -230,13 +256,50 @@ header {
 .menu-item img {
     height: 15rem;
     width: auto;
-    max-width: 15rem;
+    max-width: 13rem;
     margin: 0 auto;
 }
 
 .menu-item p {
-    margin-right: 4rem;
     margin: 0 auto;
     padding: 0;
-    width: clamp(8rem, 80%, 10rem);
+    width: clamp(9rem, 80%, 12rem);
 }
+
+/* About */
+
+.about {
+    padding-bottom: 2rem;
+    background-color: rgba(0, 0, 0, .9);
+    font-size: 1.5rem;
+    width: clamp(20rem, 90%, 28rem);
+}
+
+.about-section {
+    color: white;
+    line-height: 2rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-contact {
+    padding: 1rem 1rem 2rem;
+    background-color: rgba(0, 0, 0, .9);
+    font-size: 1.25rem;
+    width: clamp(20rem, 90%, 28rem)
+}
+
+.container-contact ul {
+    list-style: none;
+    color: white;
+    line-height: 2rem;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
