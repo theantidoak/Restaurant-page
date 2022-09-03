@@ -6,10 +6,18 @@
     font-style: normal;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+
+/* Header */
+
 :root {
     background-color: black;
-    height: 100%;
+    height: 100vh;
     width: 100%;
+    overflow-y: auto;
 }
 
 body {
@@ -18,9 +26,10 @@ body {
     background-position: center;
     background-size: cover;
     margin: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     padding-bottom: 2rem;
+    overflow-y: auto;
 }
 
 header {
@@ -29,7 +38,7 @@ header {
     padding: 1rem 0;
     background-color: rgba(0, 0, 0, .7);
     width: 100%;
-    height: 5rem;
+    height: 6rem;
     overflow-x: hidden;
 }
 
@@ -37,7 +46,7 @@ header {
     color: red;
     border-bottom: 2px double red;
     padding-bottom: 4px;
-    padding-top: 2rem;
+    padding-top: 1rem;
     margin-left: 3.5rem;
     margin-top: 0;
     width: fit-content;
@@ -46,14 +55,14 @@ header {
 }
 
 .hamburgerGrill {
-    background-image: url('images/bottomGrill.svg');
+    background-image: url('images/topGrill.svg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     background-size: contain;
     background-color: rgba(255, 0, 0, .6);
-    border-radius: 50%;
-    min-width: 4rem;
-    min-height: 4rem;
+    border-radius: 20px;
+    min-width: 5rem;
+    min-height: 5rem;
     z-index: 3;
     margin-right: 1rem;
     cursor: pointer;
@@ -62,6 +71,7 @@ header {
 }
 
 .hamburgerGrill:focus {
+    background-image: url('images/bottomGrill.svg');
     background-color: rgba(255, 0, 0, .6);
     padding: 1rem 2rem 0 1.5rem;
     margin-right: 0;
@@ -95,10 +105,36 @@ header {
     padding: 0;
     margin: 0;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .open-hamburger ul li {
     padding: .25rem 0;
+}
+
+
+
+
+/*------ Grill -------*/
+.container {
+    opacity: .85;
+    height: fit-content;
+    width: clamp(20rem, 80%, 28rem);
+    padding: 1rem 4rem 0;
+    background-color: rgba(0, 0, 0, .4);
+
+    margin: 1rem auto 0;
+    border-radius: 10px;
+    text-align: center;
+    color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 2px 2px 5px black;
+    overflow: hidden;
 }
 
 .first-text {
@@ -109,26 +145,10 @@ header {
     z-index: 2;
 }
 
-
-
-
-/*------ Grill -------*/
-.grill {
-    opacity: .85;
-    height: fit-content;
-    width: min-content;
-    padding: 1rem 4rem 0;
-    background-color: rgba(0, 0, 0, .4);
-
-    margin: 1rem auto 0;
-    border-radius: 10px;
-    text-align: center;
-    color: red;
-}
-
 #svg-object {
     transition: all ease .5s;
     z-index: 1;
+    
 }
 
 .grill-top:hover #svg-object {
@@ -142,6 +162,10 @@ header {
 
 .grill-top {
     position: absolute;
+    top: 3.5rem;
+    left: 0;
+    right: 1.25rem;
+    margin: 0 auto;
     width: fit-content;
     z-index: 1;
     cursor: pointer;
@@ -177,4 +201,41 @@ header {
 .grill-bottom:hover h3 {
     color: #e25822;
     transform: scale(1.1);
+}
+
+
+/* Menu */
+
+
+.menu-items {
+    display: grid;
+}
+
+.menu-item {
+    /* background-image: url(images/brisketBasket.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain; */
+    height: 25rem;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    font-size: 2.5rem;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.menu-item img {
+    height: 15rem;
+    width: auto;
+    max-width: 15rem;
+    margin: 0 auto;
+}
+
+.menu-item p {
+    margin-right: 4rem;
+    margin: 0 auto;
+    padding: 0;
+    width: clamp(8rem, 80%, 10rem);
 }

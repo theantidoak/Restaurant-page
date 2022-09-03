@@ -3,6 +3,7 @@ console.log(count++);
 
 import { addGrillFeatures,  grillParts } from "./createGrill";
 import './style.css';
+import { createMenu } from "./menu";
 import IconBrisket from './images/brisket.jpg';
 
 
@@ -48,6 +49,8 @@ import IconBrisket from './images/brisket.jpg';
     // grillParts();
     // addGrillFeatures();
 
+
+    createMenu();
 })();
 
 

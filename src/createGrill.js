@@ -4,8 +4,8 @@ import IconTop from './images/topGrill.svg';
 function grillParts() {    
 
     const content = document.querySelector('.content');
-    const grill = document.createElement('div');
-    grill.classList.add('grill');
+    const container = document.createElement('div');
+    container.classList.add('container');
     const grillTop = document.createElement('div');
     grillTop.classList.add('grill-top');
     const grillBottom = document.createElement('div');
@@ -37,11 +37,11 @@ function grillParts() {
 
     text1.appendChild(text1Content);
 
-    grill.appendChild(text1);
-    grill.appendChild(grillTop);
-    grill.appendChild(grillBottom);
+    container.appendChild(text1);
+    container.appendChild(grillTop);
+    container.appendChild(grillBottom);
 
-    content.appendChild(grill);
+    content.appendChild(container);
 
 };
 
