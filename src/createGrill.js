@@ -1,9 +1,14 @@
 import IconBottom from './images/bottomGrill.svg';
 import IconTop from './images/topGrill.svg';
 
+import { createAbout } from './about';
+import { createMenu } from './menu';
+
+
 function grillParts() {    
 
     const content = document.querySelector('.content');
+    
     const container = document.createElement('div');
     container.classList.add('container');
     const grillTop = document.createElement('div');
@@ -42,6 +47,9 @@ function grillParts() {
     container.appendChild(grillBottom);
 
     content.appendChild(container);
+
+    grillTop.addEventListener('click', createMenu);
+    grillBottom.addEventListener('click', createAbout);
 
 };
 
