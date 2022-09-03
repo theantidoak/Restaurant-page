@@ -10,6 +10,9 @@ function grillParts() {
     grillTop.classList.add('grill-top');
     const grillBottom = document.createElement('div');
     grillBottom.classList.add('grill-bottom');
+    const text1 = document.createElement('p');
+    text1.classList.add('first-text');
+    const text1Content = document.createTextNode('Falling off the bone since 1997');
     const object1 = document.createElement('object');
     object1.id = 'svg-object';
     object1.setAttribute('type', "image/svg+xml");
@@ -32,6 +35,9 @@ function grillParts() {
     about.appendChild(aboutContent);
     grillBottom.appendChild(about);
 
+    text1.appendChild(text1Content);
+
+    grill.appendChild(text1);
     grill.appendChild(grillTop);
     grill.appendChild(grillBottom);
 
@@ -47,12 +53,12 @@ function addGrillFeatures() {
         const grillBottom = document.querySelector('.grill-bottom');
         
     
-        svgObject.contentDocument.querySelectorAll(".vents").forEach(vent => vent.setAttribute("fill", "#e25822"));
+        svgObject.contentDocument.querySelectorAll(".vents").forEach(vent => vent.setAttribute("fill", "#e2582270"));
         svgObject2.contentDocument.querySelector('.price-tag').setAttribute("fill", "red");
     
         function changeVentColors(event) {
             if (event.type === 'mouseleave') {
-                svgObject.contentDocument.querySelectorAll(".vents").forEach(vent => vent.setAttribute("fill", "#e25822"));
+                svgObject.contentDocument.querySelectorAll(".vents").forEach(vent => vent.setAttribute("fill", "#e2582270"));
             } else if (event.type === 'mouseenter') {
                 svgObject.contentDocument.querySelectorAll(".vents").forEach(vent => vent.setAttribute("fill", "black"));
             }
@@ -61,8 +67,10 @@ function addGrillFeatures() {
         function changeTagColor(event) {
             if (event.type === 'mouseleave') {
                 svgObject2.contentDocument.querySelector('.price-tag').setAttribute("fill", "red");
+                svgObject2.contentDocument.querySelector('.aboutText').setAttribute("stroke", "black");
             } else if (event.type === 'mouseenter') {
                 svgObject2.contentDocument.querySelector('.price-tag').setAttribute("fill", "#e25822");
+                svgObject2.contentDocument.querySelector('.aboutText').setAttribute("stroke", "black");
             }
         }
     
@@ -71,7 +79,7 @@ function addGrillFeatures() {
         grillBottom.addEventListener('mouseenter', changeTagColor);
         grillBottom.addEventListener('mouseleave', changeTagColor);
     
-    }, 1000);
+    }, 100);
 }
 
 export {grillParts, addGrillFeatures}
