@@ -51,6 +51,7 @@ header {
     height: 3rem;
     font-family: 'firestarterregular';
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .hamburgerGrill {
@@ -188,7 +189,7 @@ header {
 
 .grill-top {
     position: absolute;
-    top: 3.5rem;
+    top: 5rem;
     left: 0;
     right: 1.25rem;
     margin: 0 auto;

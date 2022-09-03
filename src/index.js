@@ -1,18 +1,22 @@
 let count = 0;
 console.log(count++);
 
-import { createHeader } from "./createHeader";
-import { addGrillFeatures,  grillParts } from "./createGrill";
+import { createHeader } from "./header";
+import { addGrillFeatures,  grillParts } from "./homepage";
 import './style.css';
 import { createMenu } from "./menu";
 import IconBrisket from './images/brisket.jpg';
 import { createAbout } from "./about";
 
 
-(function createTabs() {
-    createHeader();
+(function init() {
     grillParts();
     addGrillFeatures();
+    createTabs();
+})();
+
+function createTabs() {
+    
 
     const headerH1 = document.querySelector('header h1');
     
@@ -32,15 +36,8 @@ import { createAbout } from "./about";
 
     about.addEventListener('click', createAbout);
 
-})();
+};
 
-    // grillParts();
-    // addGrillFeatures();
-
-
-    // createMenu();
-
-    // createAbout();
 
 
 

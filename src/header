@@ -11,10 +11,13 @@ function createHeader() {
         openHamburger.classList.add('open-hamburger');
         const openUl = document.createElement('ul');
         const liHome = document.createElement('li');
+        liHome.id = 'home-id';
         const liHomeContent = document.createTextNode('Home');
         const liMenu = document.createElement('li');
+        liMenu.id = 'menu-id'
         const liMenuContent = document.createTextNode('Menu');
         const liAbout = document.createElement('li');
+        liAbout.id = 'about-id'
         const liAboutContent = document.createTextNode('About');
 
         liHome.appendChild(liHomeContent);

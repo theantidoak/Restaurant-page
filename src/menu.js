@@ -3,9 +3,15 @@ import IconPork from './images/pulledPork.jpg';
 import IconGreens from './images/collardGreens.jpg';
 import IconCornbread from './images/cornbread.jpg';
 
-function createMenu() {
+import {createHeader} from './header';
+import {deletePage, createTabs} from './homepage';
 
+function createMenu() {
+    console.log('hey');
     const content = document.querySelector('.content');
+
+    deletePage(content);
+    createHeader();
     const container = document.createElement('div');
     container.classList.add('container');
     const title = document.createElement('h1');
@@ -74,6 +80,8 @@ function createMenu() {
 
     content.appendChild(container);
     content.appendChild(menuItems);
+
+    createTabs();
 }
 
 export { createMenu }

@@ -3,11 +3,16 @@ import IconTop from './images/topGrill.svg';
 
 import { createAbout } from './about';
 import { createMenu } from './menu';
+import { createHeader } from './header';
 
 
 function grillParts() {    
 
     const content = document.querySelector('.content');
+
+    deletePage(content);
+
+    createHeader();
     
     const container = document.createElement('div');
     container.classList.add('container');
@@ -51,6 +56,8 @@ function grillParts() {
     grillTop.addEventListener('click', createMenu);
     grillBottom.addEventListener('click', createAbout);
 
+    return {content}
+
 };
 
 function addGrillFeatures() {
@@ -90,4 +97,32 @@ function addGrillFeatures() {
     }, 100);
 }
 
-export {grillParts, addGrillFeatures}
+function deletePage(content) {
+    while (content.firstChild) {
+        content.removeChild(content.lastChild);
+    }
+}
+
+function createTabs() {
+    
+    const headerH1 = document.querySelector('header h1');
+    
+    headerH1.addEventListener('click', grillParts);
+    headerH1.addEventListener('click', addGrillFeatures);
+
+    const home = document.querySelector('#home-id');
+
+    home.addEventListener('click', grillParts);
+    home.addEventListener('click', addGrillFeatures);
+
+    const menu = document.querySelector('#menu-id');
+
+    menu.addEventListener('click', createMenu);
+
+    const about = document.querySelector('#about-id');
+
+    about.addEventListener('click', createAbout);
+
+};
+
+export {grillParts, addGrillFeatures, deletePage, createTabs}

@@ -1,6 +1,13 @@
+import {deletePage, createTabs} from './homepage';
+import {createHeader} from './header'
+
 function createAbout() {
 
     const content = document.querySelector('.content');
+
+    deletePage(content);
+    createHeader();
+
     const flexContainer = document.createElement('div');
     flexContainer.classList.add('flex-container');
 
@@ -57,6 +64,7 @@ function createAbout() {
     flexContainer.appendChild(containerContact);
     content.appendChild(flexContainer);
 
+    createTabs();
 }
 
 export {createAbout}
