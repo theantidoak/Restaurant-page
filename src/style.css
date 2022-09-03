@@ -209,6 +209,7 @@ header {
 
 .menu-items {
     display: grid;
+    gap: 2rem;
 }
 
 .menu-item {
