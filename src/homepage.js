@@ -56,7 +56,9 @@ function grillParts() {
     grillTop.addEventListener('click', createMenu);
     grillBottom.addEventListener('click', createAbout);
 
-    return {content}
+
+
+    createTabs();
 
 };
 
